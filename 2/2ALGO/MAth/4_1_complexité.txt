@@ -1,0 +1,2 @@
+La complexité de l'algorithme est de O(nm), car on calcule n*m sous-problèmes différents et on stocke chaque résultat une seule fois dans la memoire.
+

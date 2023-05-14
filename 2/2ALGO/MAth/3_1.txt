@@ -1,0 +1,13 @@
+La formule de récurrence pour g[i][j] est la suivante :
+
+g[i][j] = c[i][j] + min(g[i-1][k]) pour k de 1 à m distinct de j, où c[i][j] est le coût de planter un arbre de l'essence j à l'emplacement i.
+
+Le raisonnement derrière cette formule est le suivant : pour obtenir le coût minimal pour planter un arbre de l'essence j à l'emplacement i, on doit considérer les coûts de planter un arbre de chaque essence k différente de j aux emplacements i-1, et prendre le minimum de ces coûts.
+Ensuite, on ajoute le coût c[i][j] de planter un arbre de l'essence j à l'emplacement i.
+De cette manière, on assure que deux emplacements contigus ne contiennent pas deux arbres de la même essence, car on ne considère que les coûts de planter des essences différentes de celle choisie pour l'emplacement i.
+
+
+Solution au problème possible :
+
+Pour obtenir la solution optimale, il suffit de calculer tous les g[i][j] et de prendre le minimum pour chaque i.
+En d'autres termes, il faut déterminer le coût minimal de toutes les plantations possibles de chaque essence à chaque emplacement, en tenant compte des plantations précédentes, et choisir la solution la moins coûteuse à la fin.

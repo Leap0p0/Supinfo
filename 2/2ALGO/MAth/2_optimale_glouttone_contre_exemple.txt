@@ -1,0 +1,21 @@
+Question : Cette stratégie est-elle optimale ? On justifiera sa réponse en proposant une démonstration ou un contre-exemple selon la réponse apportée.
+
+Réponse : 
+
+Cette implémentation n'est pas forcément optimale et peut ne pas donner la solution optimale dans certains cas. 
+En effet, à chaque étape, l'algorithme choisit simplement l'essence avec le coût le plus faible pour l'emplacement suivant, sans prendre en compte les essences déjà plantées ou les emplacements voisins.
+
+Pour obtenir une solution optimale, il est nécessaire de considérer toutes les combinaisons possibles d'essences et d'emplacements, ce qui nécessite une exploration exhaustive de l'espace de recherche.
+Cette approche est souvent impraticable pour des problèmes de grande taille en raison de son coût exponentiel en temps et en espace. Plus la taille augmente, plus le coût ne sera pas optimal.
+
+
+Contre exemple simple :
+
+48 25 22
+35 3 35
+9 28 2
+29 38 1
+
+
+La stratégie gloutonne va choisir les essences suivantes : (3,2,3,1) = 56
+Sur le moment il a choisit (3,2,3,1) alors que le choix optimal aurait été de faire (3,2,1,3) = 35

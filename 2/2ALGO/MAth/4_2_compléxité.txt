@@ -1,0 +1,6 @@
+La complexité de cet algorithme est O(nm^2), car il y a deux boucles imbriquées qui parcourent n et m, et une troisième boucle qui parcoure m pour trouver la meilleure essence à planter à l'emplacement i.
+
+Explications :
+
+Dans le pire des cas, toutes les combinaisons possibles de plantations doivent être examinées, soit m^n.
+Grâce à la programmation dynamique, le nombre de calculs est réduit à nm^2.
